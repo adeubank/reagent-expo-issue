@@ -5,6 +5,7 @@
     ["react" :as react]
     [reagent.core :as r]
     [shadow.expo :as expo]
+    [victory-native :as victory]
     ))
 
 ;; must use defonce and must refresh full app so metro can fill these in
@@ -28,6 +29,7 @@
 
 (defn root []
   [:> rn/View {:style (.-container styles)}
+    [:> victory/VictoryBar ]
    [:> rn/Text {:style (.-title styles)} "Hello!"]
    [:> rn/Image {:source splash-img :style {:width 200 :height 200}}]])
 
